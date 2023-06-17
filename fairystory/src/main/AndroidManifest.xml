@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.bearya.robot.fairystory">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".FairyStoryApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup">
+
+        <activity
+            android:name=".ui.LauncherActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.CardControllerActivity"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name=".ui.ThemeIntroduceActivity"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name=".ui.ThemesActivity"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name=".ui.RuntimeActivity"
+            android:launchMode="singleTask" />
+
+        <activity android:name=".ui.RecordActivity"
+            android:launchMode="singleTask" />
+
+        <activity android:name=".ui.DiscoveryActivity"
+            android:launchMode="singleTask" />
+
+        <activity android:name=".ui.HistoryActivity"
+            android:launchMode="singleTask" />
+
+        <activity android:name=".ui.TellStoryActivity"
+            android:launchMode="singleTask" />
+
+        <activity android:name=".station.LibActivity"
+            android:launchMode="singleTask" />
+
+        <activity android:name=".station.StationConfigActivity"
+            android:launchMode="singleTask" />
+
+        <activity android:name=".station.StationsActivity"
+            android:launchMode="singleTask" />
+
+        <activity android:name=".station.camera.CameraActivity"
+            android:launchMode="singleTask" />
+
+        <activity android:name=".ui.DefineFunctionActivity"
+            android:launchMode="singleTask" />
+
+        <activity android:name=".ui.FunctionActivity"
+            android:launchMode="singleTask" />
+
+        <meta-data
+            android:name="BUGLY_ENABLE_DEBUG"
+            android:value="true" />
+        <meta-data
+            android:name="BUGLY_APPID"
+            android:value="8f99467500" />
+
+    </application>
+
+</manifest>

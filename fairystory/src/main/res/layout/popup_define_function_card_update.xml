@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="512dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/pop_border">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tips"
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        android:text="@string/update_tips"
+        android:textAlignment="center"
+        android:textColor="#81511C"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/other"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/tips"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/right"
+        app:srcCompat="@mipmap/ic_link" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/forward"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@id/backward"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tips"
+        app:srcCompat="@drawable/selector_upward" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/backward"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/left"
+        app:layout_constraintStart_toEndOf="@id/forward"
+        app:layout_constraintTop_toBottomOf="@id/tips"
+        app:srcCompat="@drawable/selector_downward" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/left"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@id/right"
+        app:layout_constraintStart_toEndOf="@id/backward"
+        app:layout_constraintTop_toBottomOf="@id/tips"
+        app:srcCompat="@drawable/selector_left" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/right"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@id/other"
+        app:layout_constraintStart_toEndOf="@id/left"
+        app:layout_constraintTop_toBottomOf="@id/tips"
+        app:srcCompat="@drawable/selector_right" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/left_add"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/right_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/forward"
+        app:srcCompat="@mipmap/ic_add_left" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/right_add"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/left_add"
+        app:layout_constraintTop_toBottomOf="@id/forward"
+        app:srcCompat="@mipmap/ic_add_right" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

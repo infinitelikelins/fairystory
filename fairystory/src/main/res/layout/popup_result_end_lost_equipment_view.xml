@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@drawable/spirit_un_end0009">
+
+    <com.bearya.robot.base.ui.view.FrameSurfaceView
+        android:id="@+id/frame_surface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/equipment_2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="45dp"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/armor" />
+
+    <ImageView
+        android:id="@+id/equipment_1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="45dp"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toStartOf="@id/equipment_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/map" />
+
+    <ImageView
+        android:id="@+id/equipment_3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="45dp"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/equipment_2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/def" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

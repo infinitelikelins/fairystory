@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/popup_result_success_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:background="@mipmap/card_controller_bg">
+
+    <View
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ic_light"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_light" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/exit_game"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="48dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/update_controller"
+        app:layout_constraintStart_toEndOf="@id/ic_light"
+        app:layout_constraintWidth_percent="0.17"
+        app:srcCompat="@drawable/exit_game_selector" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/update_controller"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="48dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/save_game"
+        app:layout_constraintStart_toEndOf="@id/exit_game"
+        app:layout_constraintWidth_percent="0.17"
+        app:srcCompat="@drawable/update_controller_selector" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/save_game"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="48dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/update_controller"
+        app:layout_constraintWidth_percent="0.17"
+        app:srcCompat="@drawable/save_game_selector" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fairy_result_border"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/exit_game"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ic_light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/fairy_result_border" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/prop_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/path_icon"
+        app:layout_constraintEnd_toStartOf="@+id/prop_text"
+        app:layout_constraintStart_toStartOf="@id/fairy_result_border"
+        app:layout_constraintTop_toTopOf="@id/fairy_result_border"
+        app:srcCompat="@mipmap/prop_icon" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/path_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/station_icon"
+        app:layout_constraintEnd_toEndOf="@id/prop_icon"
+        app:layout_constraintStart_toStartOf="@id/prop_icon"
+        app:layout_constraintTop_toBottomOf="@id/prop_icon"
+        app:srcCompat="@mipmap/path_icon" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/station_icon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/function_icon"
+        app:layout_constraintEnd_toEndOf="@id/path_icon"
+        app:layout_constraintStart_toStartOf="@id/path_icon"
+        app:layout_constraintTop_toBottomOf="@id/path_icon"
+        app:srcCompat="@mipmap/station_icon" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/function_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/fairy_result_border"
+        app:layout_constraintEnd_toEndOf="@id/station_icon"
+        app:layout_constraintStart_toStartOf="@id/station_icon"
+        app:layout_constraintTop_toBottomOf="@id/station_icon"
+        app:srcCompat="@mipmap/path_icon" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/path_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/path_command"
+        android:textAlignment="center"
+        android:textColor="#9F5F18"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/path_icon"
+        app:layout_constraintEnd_toStartOf="@id/path_count"
+        app:layout_constraintStart_toEndOf="@id/path_icon"
+        app:layout_constraintTop_toTopOf="@id/path_icon" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/prop_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/prop_command"
+        android:textAlignment="center"
+        android:textColor="#9F5F18"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/prop_icon"
+        app:layout_constraintEnd_toStartOf="@id/prop_count"
+        app:layout_constraintStart_toEndOf="@id/prop_icon"
+        app:layout_constraintTop_toTopOf="@id/prop_icon" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/station_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/station_command"
+        android:textAlignment="center"
+        android:textColor="#9F5F18"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/station_icon"
+        app:layout_constraintEnd_toStartOf="@id/station_count"
+        app:layout_constraintStart_toEndOf="@id/station_icon"
+        app:layout_constraintTop_toTopOf="@id/station_icon" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/function_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/function_command"
+        android:textAlignment="center"
+        android:textColor="#9F5F18"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/function_icon"
+        app:layout_constraintEnd_toStartOf="@id/function_count"
+        app:layout_constraintStart_toEndOf="@id/function_icon"
+        app:layout_constraintTop_toTopOf="@id/function_icon" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/prop_count"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#FE6B1C"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/prop_icon"
+        app:layout_constraintEnd_toEndOf="@id/fairy_result_border"
+        app:layout_constraintStart_toEndOf="@id/prop_text"
+        app:layout_constraintTop_toTopOf="@id/prop_icon"
+        tools:text="30" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/path_count"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#FE6B1C"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/path_icon"
+        app:layout_constraintEnd_toEndOf="@id/fairy_result_border"
+        app:layout_constraintStart_toEndOf="@id/path_text"
+        app:layout_constraintTop_toTopOf="@id/path_icon"
+        tools:text="30" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/station_count"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#FE6B1C"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/station_icon"
+        app:layout_constraintEnd_toEndOf="@id/fairy_result_border"
+        app:layout_constraintStart_toEndOf="@id/station_text"
+        app:layout_constraintTop_toTopOf="@id/station_icon"
+        tools:text="30" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/function_count"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="#FE6B1C"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/function_icon"
+        app:layout_constraintEnd_toEndOf="@id/fairy_result_border"
+        app:layout_constraintStart_toEndOf="@id/function_text"
+        app:layout_constraintTop_toTopOf="@id/function_icon"
+        tools:text="30" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

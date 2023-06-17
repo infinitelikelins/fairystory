@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="500dp"
+    android:layout_height="270dp"
+    android:layout_gravity="center"
+    android:background="@drawable/pop_border">
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/choose_time"
+        android:textColor="@color/step_press_color"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv1"
+        style="@style/station_action_time_text"
+        android:tag="3"
+        android:text="@string/three_second"
+        app:layout_constraintBottom_toTopOf="@+id/tv6"
+        app:layout_constraintEnd_toStartOf="@+id/tv2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/tv2"
+        style="@style/station_action_time_text"
+        android:tag="4"
+        android:text="@string/four_second"
+        app:layout_constraintBottom_toBottomOf="@+id/tv1"
+        app:layout_constraintEnd_toStartOf="@+id/tv3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv1"
+        app:layout_constraintTop_toTopOf="@+id/tv1" />
+
+    <TextView
+        android:id="@+id/tv3"
+        style="@style/station_action_time_text"
+        android:tag="5"
+        android:text="@string/five_second"
+        app:layout_constraintBottom_toBottomOf="@+id/tv1"
+        app:layout_constraintEnd_toStartOf="@+id/tv4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv2"
+        app:layout_constraintTop_toTopOf="@+id/tv1" />
+
+    <TextView
+        android:id="@+id/tv4"
+        style="@style/station_action_time_text"
+        android:tag="6"
+        android:text="@string/six_second"
+        app:layout_constraintBottom_toBottomOf="@+id/tv1"
+        app:layout_constraintEnd_toStartOf="@+id/tv5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv3"
+        app:layout_constraintTop_toTopOf="@+id/tv1" />
+
+    <TextView
+        android:id="@+id/tv5"
+        style="@style/station_action_time_text"
+        android:tag="7"
+        android:text="@string/seven_second"
+        app:layout_constraintBottom_toBottomOf="@+id/tv1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv4"
+        app:layout_constraintTop_toTopOf="@+id/tv1" />
+
+    <TextView
+        android:id="@+id/tv6"
+        style="@style/station_action_time_text"
+        android:tag="8"
+        android:text="@string/eight_second"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+    <TextView
+        android:id="@+id/tv7"
+        style="@style/station_action_time_text"
+        android:tag="9"
+        android:text="@string/nine_second"
+        app:layout_constraintBottom_toBottomOf="@+id/tv6"
+        app:layout_constraintEnd_toStartOf="@+id/tv8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv6"
+        app:layout_constraintTop_toTopOf="@+id/tv6" />
+
+    <TextView
+        android:id="@+id/tv8"
+        style="@style/station_action_time_text"
+        android:tag="10"
+        android:text="@string/ten_second"
+        app:layout_constraintBottom_toBottomOf="@+id/tv6"
+        app:layout_constraintEnd_toStartOf="@+id/tv9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv7"
+        app:layout_constraintTop_toTopOf="@+id/tv6" />
+
+    <TextView
+        android:id="@+id/tv9"
+        style="@style/station_action_time_text"
+        android:tag="15"
+        android:text="@string/fifteen_second"
+        app:layout_constraintBottom_toBottomOf="@+id/tv6"
+        app:layout_constraintEnd_toStartOf="@+id/tv10"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv8"
+        app:layout_constraintTop_toTopOf="@+id/tv6" />
+
+    <TextView
+        android:id="@+id/tv10"
+        style="@style/station_action_time_text"
+        android:tag="20"
+        android:text="@string/twenty_second"
+        app:layout_constraintBottom_toBottomOf="@+id/tv6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv9"
+        app:layout_constraintTop_toTopOf="@+id/tv6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

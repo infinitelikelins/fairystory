@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/error_root_prop"
+    android:layout_width="425dp"
+    android:layout_height="250dp"
+    android:layout_gravity="center"
+    android:background="@drawable/pop_border"
+    android:padding="16dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/blocks_status"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toTopOf="@id/blocks_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/handy_block_wait" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/blocks_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="top|center_horizontal"
+        android:lines="1"
+        android:maxLines="1"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/blocks_tips"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/blocks_status"
+        tools:text="@string/blocks_wait_command" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/blocks_tips"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="top|center_horizontal"
+        android:lines="1"
+        android:maxLines="1"
+        android:textColor="#99333333"
+        android:textStyle="bold"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/blocks_message"
+        tools:text="@string/blocks_tips" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/manual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="@string/blocks_help"
+        android:textColor="#333333"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_manual"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/blocks_status"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

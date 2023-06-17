@@ -1,0 +1,63 @@
+<resources>
+
+    <style name="wrapContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="backButton" parent="wrapContent">
+        <item name="android:background">@mipmap/btn_back</item>
+        <item name="android:onClick">onBackClicked</item>
+    </style>
+
+    <style name="text1">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#fe6b1c</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="text2">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#9f5f18</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="text3">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--底部弹框属性设置-->
+    <style name="FullScreenDialog" parent="@style/Base.V7.Theme.AppCompat.Light.Dialog">
+        <!--无标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--键盘状态-->
+        <item name="android:windowSoftInputMode">stateUnspecified</item>
+        <!--dialog弹出时activity的背景-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+    </style>
+
+    <style name="station_image">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">120dp</item>
+    </style>
+
+    <style name="station_action_time_text">
+        <item name="android:layout_width">72dp</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@drawable/step_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/step_press_color</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

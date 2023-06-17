@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_card_action"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/parent_action"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:padding="12dp"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/position"
+        tools:srcCompat="@mipmap/ic_forward" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/parent_action_error"
+        android:layout_width="50dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/parent_action"
+        app:layout_constraintTop_toTopOf="@id/parent_action"
+        app:srcCompat="@mipmap/ic_card_error"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/step_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/step"
+        app:layout_constraintEnd_toEndOf="@id/parent_action"
+        app:layout_constraintStart_toStartOf="@id/parent_action"
+        app:layout_constraintTop_toBottomOf="@id/parent_action"
+        app:srcCompat="@mipmap/step_bg" />
+
+    <TextView
+        android:id="@+id/step"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:gravity="center"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/parent_action"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/parent_action"
+        tools:text="10"
+        tools:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/parent_action"
+        app:layout_constraintStart_toStartOf="@id/parent_action"
+        app:layout_constraintTop_toBottomOf="@id/step"
+        app:srcCompat="@mipmap/ic_link_black_24dp"
+        tools:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/child_action"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:paddingTop="4dp"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/parent_action"
+        app:layout_constraintStart_toStartOf="@id/parent_action"
+        app:layout_constraintTop_toBottomOf="@id/link"
+        tools:srcCompat="@mipmap/ic_soldie"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/child_action_error"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/child_action"
+        app:layout_constraintTop_toBottomOf="@id/link"
+        app:srcCompat="@mipmap/ic_card_error"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,37 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.fairystory.versionCode
+        versionName rootProject.ext.fairystory.versionName
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    api fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+    //noinspection GradleDependency
+    api 'com.airbnb.android:lottie:2.1.0'
+    api 'androidx.constraintlayout:constraintlayout:2.0.4'
+    api 'androidx.recyclerview:recyclerview:1.2.0'
+    api 'com.google.code.gson:gson:2.8.6'
+    //noinspection GradleDependency
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.35'
+    api 'com.github.razerdp:BasePopup:2.2.20'
+    api 'org.adw.library:discrete-seekbar:1.0.1'
+    //noinspection GradleDependency
+    api 'com.github.bumptech.glide:glide:3.8.0'
+    api project(':qdreamer')
+    api project(':actionlib')
+    api project(':bluetooth')
+}

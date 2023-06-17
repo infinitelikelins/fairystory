@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="#04aae8">
+
+    <LinearLayout
+        android:layout_width="640dp"
+        android:layout_height="364dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/ll_power_operation_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginRight="50dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:src="@drawable/shutdown_selector"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="关机"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_power_operation_reboot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:visibility="gone"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:src="@drawable/reboot_selector"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="重启"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_power_operation_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:src="@drawable/cancel_selector"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="取消"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

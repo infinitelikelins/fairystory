@@ -1,0 +1,24 @@
+//用于存放一些能用的东西比如版本号
+ext {
+    android = [
+            compileSdkVersion: 30,
+            minSdkVersion    : 23,
+            targetSdkVersion : 30,
+            buildToolsVersion: "30.0.3"
+    ]
+
+    city = [
+            name       : "Programme",
+            appid      : "com.bearya.robot.programme",
+            versionCode: 40402,
+            versionName: "4.4.2"
+    ]
+
+    fairystory = [
+            name       : "FairyStory",
+            appid      : "com.bearya.robot.fairystory",
+            versionCode: 50405,
+            versionName: "5.4.5"
+    ]
+
+}

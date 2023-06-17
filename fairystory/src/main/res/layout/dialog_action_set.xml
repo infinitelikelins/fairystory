@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/action_dialog_bg">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cardView1"
+            android:layout_width="115dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="8dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/station_action_hand_selector"
+            app:layout_constraintBottom_toTopOf="@+id/cardView4"
+            app:layout_constraintEnd_toStartOf="@+id/cardView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/shake_hand_left_right"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="@+id/cardView1"
+            app:layout_constraintStart_toStartOf="@+id/cardView1"
+            app:layout_constraintTop_toBottomOf="@+id/cardView1" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cardView2"
+            android:layout_width="115dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/station_action_left_hand_selector"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView1"
+            app:layout_constraintEnd_toStartOf="@+id/cardView3"
+            app:layout_constraintStart_toEndOf="@+id/cardView1" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/shake_hand_left"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="@+id/cardView2"
+            app:layout_constraintStart_toStartOf="@+id/cardView2"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cardView3"
+            android:layout_width="115dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="24dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/station_action_right_hand_selector"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cardView2" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/shake_hand_right"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="@+id/cardView3"
+            app:layout_constraintStart_toStartOf="@+id/cardView3"
+            app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cardView4"
+            android:layout_width="115dp"
+            android:layout_height="92dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="40dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/station_action_head_selector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/cardView1"
+            app:layout_constraintTop_toBottomOf="@+id/cardView1" />
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/turn_head"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="@+id/cardView4"
+            app:layout_constraintStart_toStartOf="@+id/cardView4"
+            app:layout_constraintTop_toBottomOf="@+id/cardView4" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cardView5"
+            android:layout_width="115dp"
+            android:layout_height="92dp"
+            android:layout_marginEnd="12dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/station_action_head_to_left_selector"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView4"
+            app:layout_constraintStart_toStartOf="@+id/cardView2" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/turn_head_left"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="@+id/cardView5"
+            app:layout_constraintStart_toStartOf="@+id/cardView5"
+            app:layout_constraintTop_toBottomOf="@+id/cardView5" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cardView6"
+            android:layout_width="115dp"
+            android:layout_height="92dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/station_action_head_to_right_selector"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView4"
+            app:layout_constraintStart_toStartOf="@+id/cardView3" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/turn_head_right"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="@+id/cardView6"
+            app:layout_constraintStart_toStartOf="@+id/cardView6"
+            app:layout_constraintTop_toBottomOf="@+id/cardView6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

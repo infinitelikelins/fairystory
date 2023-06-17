@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/pop_border"
+    android:paddingStart="16dp"
+    android:paddingTop="2dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="16dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/save_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/save_success"
+        android:textAlignment="center"
+        android:textColor="#81511C"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/order_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:padding="4dp"
+        android:textAlignment="center"
+        android:textColor="#81511C"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/save_tips"
+        tools:text="@string/serial_num" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/tell_story_cancel_bg"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/right_now"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_id" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/right_now"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/tell_story_again_bg"
+        android:gravity="center"
+        android:text="@string/show_right_now"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cancel"
+        app:layout_constraintTop_toBottomOf="@id/order_id" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

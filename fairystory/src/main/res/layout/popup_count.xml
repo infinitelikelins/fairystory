@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/pop_border"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="12dp"
+    android:paddingBottom="16dp"
+    tools:layout_width="512dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/count_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/update_count"
+        android:textAlignment="center"
+        android:textColor="#81511C"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/count1"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/step_bg"
+            android:gravity="center"
+            android:text="@string/number_one"
+            android:textAlignment="center"
+            android:textColor="@color/step_press_color"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/count2"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/step_bg"
+            android:gravity="center"
+            android:text="@string/number_two"
+            android:textAlignment="center"
+            android:textColor="@color/step_press_color"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/count3"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/step_bg"
+            android:gravity="center"
+            android:text="@string/number_three"
+            android:textAlignment="center"
+            android:textColor="@color/step_press_color"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/count4"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/step_bg"
+            android:gravity="center"
+            android:text="@string/number_four"
+            android:textAlignment="center"
+            android:textColor="@color/step_press_color"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/count5"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/step_bg"
+            android:gravity="center"
+            android:text="@string/number_five"
+            android:textAlignment="center"
+            android:textColor="@color/step_press_color"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/count6"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/step_bg"
+            android:gravity="center"
+            android:text="@string/number_six"
+            android:textAlignment="center"
+            android:textColor="@color/step_press_color"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/count7"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/step_bg"
+            android:gravity="center"
+            android:text="@string/number_seven"
+            android:textAlignment="center"
+            android:textColor="@color/step_press_color"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/count8"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/step_bg"
+            android:gravity="center"
+            android:text="@string/number_eight"
+            android:textAlignment="center"
+            android:textColor="@color/step_press_color"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/count9"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/step_bg"
+            android:gravity="center"
+            android:text="@string/number_nine"
+            android:textAlignment="center"
+            android:textColor="@color/step_press_color"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/count10"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/step_bg"
+            android:gravity="center"
+            android:text="@string/number_ten"
+            android:textAlignment="center"
+            android:textColor="@color/step_press_color"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

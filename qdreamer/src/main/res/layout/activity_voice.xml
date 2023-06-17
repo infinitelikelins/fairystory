@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_voice"
+    android:layout_width="480dp"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <!--<ImageView
+            android:id="@+id/iv_voice"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/voice"/>-->
+    <RelativeLayout
+        android:layout_width="480dp"
+        android:layout_height="70dp"
+        android:background="@drawable/shape_gray_stroke_white_bg">
+
+        <ImageView
+            android:id="@+id/iv_setting_voice_low"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_alignParentLeft="true"
+            android:src="@mipmap/settings_voice_low" />
+
+        <ImageView
+            android:id="@+id/iv_setting_voice_high"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/settings_voice_high" />
+
+        <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+            android:id="@+id/seting_voice_seekbar"
+            android:layout_width="342dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@id/iv_setting_voice_high"
+            android:layout_toRightOf="@id/iv_setting_voice_low"
+            android:background="@drawable/shape_seekbar"
+            android:scrollbarSize="18dp"
+            app:dsb_indicatorPopupEnabled="false"
+            app:dsb_max="100"
+            app:dsb_min="0"
+            app:dsb_progressColor="#ff99cc33"
+            app:dsb_scrubberHeight="6dp"
+            app:dsb_thumbSize="18dp"
+            app:dsb_trackColor="#ff666666"
+            app:dsb_trackHeight="6dp" />
+    </RelativeLayout>
+
+</LinearLayout>

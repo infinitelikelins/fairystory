@@ -1,0 +1,23 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api 'com.tencent.bugly:nativecrashreport:3.6.0.1'
+    api 'com.tencent.tinker:tinker-android-lib:1.9.14'
+    api 'com.tencent.bugly:crashreport_upgrade:1.4.2'
+}

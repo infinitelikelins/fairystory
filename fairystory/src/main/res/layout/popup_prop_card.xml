@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="550dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/pop_border"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="16dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/choose_prop"
+        android:textAlignment="center"
+        android:textColor="#81511C"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/prop_magic"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            app:srcCompat="@mipmap/ic_magic" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/prop_water"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:gravity="center"
+            app:srcCompat="@mipmap/ic_water" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/prop_needles"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:gravity="center"
+            app:srcCompat="@mipmap/ic_needles" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/prop_flute"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:gravity="center"
+            app:srcCompat="@mipmap/ic_flute" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/prop_stick"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            app:srcCompat="@mipmap/ic_stick" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/prop_soldier"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:gravity="center"
+            app:srcCompat="@mipmap/ic_soldie" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/prop_bullet"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:gravity="center"
+            app:srcCompat="@mipmap/ic_bullet" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/prop_boat"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:gravity="center"
+            app:srcCompat="@mipmap/ic_boat" />
+
+    </LinearLayout>
+
+</LinearLayout>
+

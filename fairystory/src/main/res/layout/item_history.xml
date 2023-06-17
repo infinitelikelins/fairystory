@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="200dp"
+    android:layout_height="128dp"
+    android:layout_gravity="center"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginBottom="12dp"
+    tools:showIn="@layout/activity_history">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/history_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/walking_bg" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/tell_bg"
+        android:gravity="center"
+        android:text="@string/tell"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@id/history_bg"
+        app:layout_constraintEnd_toEndOf="@id/history_bg"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/history_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:lines="1"
+        android:maxLines="1"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintBottom_toTopOf="@id/tell"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.63"
+        tools:text="10000002001" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

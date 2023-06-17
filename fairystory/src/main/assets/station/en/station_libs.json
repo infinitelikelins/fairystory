@@ -1,0 +1,980 @@
+{
+  "image_libs": [
+
+    {
+      "name": "Emoji",
+      "imageType": "lottie",
+      "icon": "",
+      "items": [
+        {"name": "eyes","image": "zc"},
+        {"name": "laugh","image": "dx"},
+        {"name": "sing","image": "hg"},
+        {"name": "shy","image": "hx"},
+        {"name": "tongh","image": "gl"},
+        {"name": "drink water","image": "hs"},
+        {"name": "grimace","image": "aj"},
+        {"name": "drool","image": "axy"},
+        {"name": "good night","image": "sj"},
+        {"name": "scowl","image": "sq"},
+        {"name": "bah","image": "smq"},
+        {"name": "talk","image": "sh"},
+        {"name": "panic","image": "zj"},
+        {"name": "dizzy","image": "y"},
+        {"name": "grin","image": "ja"},
+        {"name": "joyful","image": "my"},
+        {"name": "frown","image": "zm"},
+        {"name": "shhh","image": "bz"}
+      ]
+    },
+    {
+      "name": "two cats fight",
+      "imageType": "res",
+      "icon": "",
+      "imageName": "station_cat_",
+      "items": [
+        {"name": "cats fight 1","index": "1"},
+        {"name": "cats fight 2","index": "2"},
+        {"name": "cats fight 3","index": "3"},
+        {"name": "cats fight 4","index": "4"}
+      ]
+    },
+    {
+      "name": "hungry snake",
+      "imageType": "res",
+      "imageName": "station_snake_",
+      "icon": "",
+      "items": [
+        {"name": "hungry snake strolls", "index": "1"},
+        {"name": "snake with apple in stomach ","index": "2"},
+        {"name": "snake with banana in stomach","index": "3"},
+        {"name": "snake with grape in stomach","index": "4"},
+        {"name": "snake with pineapple in stomach","index": "5"},
+        {"name": "snake with apple tree in stomach","index": "6"}
+      ]
+    },
+    {
+      "name": "vehicle",
+      "imageType": "res",
+      "icon": "",
+      "imageName": "station_transport_",
+      "items": [
+        {
+          "name": "high-speed train",
+          "index": "1"
+        },
+        {
+          "name": "double-decker bus ",
+          "index": "2"
+        },
+        {
+          "name": "tour bus",
+          "index": "3"
+        },
+        {
+          "name": "yacht",
+          "index": "4"
+        },
+        {
+          "name": "train",
+          "index": "5"
+        },
+        {
+          "name": "canoe",
+          "index": "6"
+        },
+        {
+          "name": "green train",
+          "index": "7"
+        },
+        {
+          "name": "steamer",
+          "index": "8"
+        },
+        {
+          "name": "airplane",
+          "index": "9"
+        },
+        {
+          "name": "wagon",
+          "index": "10"
+        }
+      ]
+    },
+    {
+      "name": "animal",
+      "imageType": "res",
+      "icon": "",
+      "imageName": "station_animal_",
+      "items": [
+        {
+          "name": "colorful turtle",
+          "index": "1"
+        },
+        {
+          "name": " arabian falcon",
+          "index": "2"
+        },
+        {
+          "name": "kiwi bird",
+          "index": "3"
+        },
+        {
+          "name": "panda",
+          "index": "4"
+        },
+        {
+          "name": "elephant",
+          "index": "5"
+        },
+        {
+          "name": "caracara",
+          "index": "6"
+        },
+        {
+          "name": "German shepherd",
+          "index": "7"
+        },
+        {
+          "name": "bulldog",
+          "index": "8"
+        },
+        {
+          "name": "koala",
+          "index": "9"
+        },
+        {
+          "name": "jindo",
+          "index": "10"
+        },
+        {
+          "name": "bald eagle",
+          "index": "11"
+        }
+      ]
+    },
+    {
+      "name": "celebrities",
+      "imageType": "res",
+      "icon": "",
+      "imageName": "station_famous_",
+      "items": [
+        {
+          "name": "Soseki Natsume",
+          "index": "1"
+        },
+        {
+          "name": "Leo Tolstoy",
+          "index": "2"
+        },
+        {
+          "name": "Thomas Edison",
+          "index": "3"
+        },
+        {
+          "name": "Kentucky ",
+          "index": "4"
+        },
+        {
+          "name": "Cervantes",
+          "index": "5"
+        },
+        {
+          "name": "Confucius",
+          "index": "6"
+        },
+        {
+          "name": "Plato",
+          "index": "7"
+        },
+        {
+          "name": "Debendranath Tagore",
+          "index": "8"
+        },
+        {
+          "name": "Norman Bethune",
+          "index": "9"
+        },
+        {
+          "name": "Shakespeare",
+          "index": "10"
+        },
+        {
+          "name": "Beethoven",
+          "index": "11"
+        },
+        {
+          "name": "Hugo",
+          "index": "12"
+        }
+      ]
+    },
+    {
+      "name": "clothings",
+      "imageType": "res",
+      "icon": "",
+      "imageName": "station_dress_",
+      "items": [
+        {
+          "name": "Russian children",
+          "index": "1"
+        },
+        {
+          "name": "Girls in kimono",
+          "index": "2"
+        },
+        {
+          "name": "Greek clothings",
+          "index": "3"
+        },
+        {
+          "name": "New Zealanders",
+          "index": "4"
+        },
+        {
+          "name": "fashion city",
+          "index": "5"
+        },
+        {
+          "name": "Maoris",
+          "index": "6"
+        },
+        {
+          "name": "girls in Han-style clothes ",
+          "index": "7"
+        },
+        {
+          "name": "French",
+          "index": "8"
+        },
+        {
+          "name": "Thai girls",
+          "index": "9"
+        },
+        {
+          "name": "Australian",
+          "index": "10"
+        },
+        {
+          "name": "clothing for cowboy",
+          "index": "11"
+        },
+        {
+          "name": "sari",
+          "index": "12"
+        },
+        {
+          "name": "Arabian",
+          "index": "13"
+        },
+        {
+          "name": "hanbok",
+          "index": "14"
+        }
+      ]
+    },
+    {
+      "name": "daily necessities",
+      "imageType": "res",
+      "icon": "",
+      "imageName": "station_necessity_",
+      "items": [
+        {
+          "name": "tissue",
+          "index": "1"
+        },
+        {
+          "name": "towel",
+          "index": "2"
+        },
+        {
+          "name": "kettle",
+          "index": "3"
+        },
+        {
+          "name": "tooth paste",
+          "index": "4"
+        },
+        {
+          "name": "soap",
+          "index": "5"
+        },
+        {
+          "name": "hanger",
+          "index": "6"
+        },
+        {
+          "name": "mirror",
+          "index": "7"
+        },
+        {
+          "name": "clock",
+          "index": "8"
+        }
+      ]
+    },
+    {
+      "name": "vocation spots",
+      "imageType": "res",
+      "icon": "",
+      "imageName": "station_attractions_",
+      "items": [
+        {
+          "name": "Eiffel tower",
+          "index": "1"
+        },
+        {
+          "name": "forbidden city",
+          "index": "2"
+        },
+        {
+          "name": "Burj Al Arab",
+          "index": "3"
+        },
+        {
+          "name": "Athens",
+          "index": "4"
+        },
+        {
+          "name": "Madrid",
+          "index": "5"
+        },
+        {
+          "name": "Seoul Tower",
+          "index": "6"
+        },
+        {
+          "name": "Tokyo",
+          "index": "7"
+        },
+        {
+          "name": "London",
+          "index": "8"
+        },
+        {
+          "name": "Triumphal Arch",
+          "index": "9"
+        },
+        {
+          "name": "CN Tower",
+          "index": "10"
+        },
+        {
+          "name": "Forbidden City from Beijing",
+          "index": "11"
+        },
+        {
+          "name": "Washington DC",
+          "index": "12"
+        },
+        {
+          "name": "Saint Basil’s Cathedral",
+          "index": "13"
+        },
+        {
+          "name": "Canberra",
+          "index": "14"
+        },
+        {
+          "name": "Mexico City",
+          "index": "15"
+        },
+        {
+          "name": "Big Ben",
+          "index": "16"
+        },
+        {
+          "name": "Grand Palace",
+          "index": "17"
+        },
+        {
+          "name": "Sky Tower",
+          "index": "18"
+        },
+        {
+          "name": "Mount Fuji",
+          "index": "19"
+        },
+        {
+          "name": "Brasilia",
+          "index": "20"
+        },
+        {
+          "name": "Pharaoh",
+          "index": "21"
+        },
+        {
+          "name": "Cairo",
+          "index": "22"
+        },
+        {
+          "name": "Sydney Opera House",
+          "index": "23"
+        },
+        {
+          "name": "Wellington",
+          "index": "24"
+        },
+        {
+          "name": "Bullring",
+          "index": "25"
+        },
+        {
+          "name": "Neuschwanstein Castle",
+          "index": "26"
+        },
+        {
+          "name": "New Delhi",
+          "index": "27"
+        },
+        {
+          "name": "Bangkok",
+          "index": "28"
+        },
+        {
+          "name": "Burlin",
+          "index": "29"
+        },
+        {
+          "name": "Taj Mahal",
+          "index": "30"
+        },
+        {
+          "name": "Ottawa",
+          "index": "31"
+        },
+        {
+          "name": "Sphinx ",
+          "index": "32"
+        },
+        {
+          "name": "Maya Pyramids ",
+          "index": "33"
+        },
+        {
+          "name": "Statue of Liberty",
+          "index": "34"
+        },
+        {
+          "name": "Moscow",
+          "index": "35"
+        },
+        {
+          "name": "Rio de Janeiro’s Christ the Redeemer",
+          "index": "36"
+        },
+        {
+          "name": "pyramids",
+          "index": "37"
+        },
+        {
+          "name": "Acropolis of Athens",
+          "index": "38"
+        },
+        {
+          "name": "Seoul",
+          "index": "39"
+        }
+      ]
+    },
+    {
+      "name": "costume",
+      "imageType": "res",
+      "icon": "",
+      "imageName": "station_clothing_",
+      "items": [
+        {
+          "name": "coat",
+          "index": "1"
+        },
+        {
+          "name": "sneakers",
+          "index": "2"
+        },
+        {
+          "name": "hat",
+          "index": "3"
+        },
+        {
+          "name": "jeans",
+          "index": "4"
+        },
+        {
+          "name": "vest",
+          "index": "5"
+        },
+        {
+          "name": "shirt",
+          "index": "6"
+        },
+        {
+          "name": "socks",
+          "index": "7"
+        },
+        {
+          "name": "skirt",
+          "index": "8"
+        }
+      ]
+    },
+    {
+      "name": "plants",
+      "imageType": "res",
+      "icon": "",
+      "imageName": "station_plant_",
+      "items": [
+        {
+          "name": "maple",
+          "index": "1"
+        },
+        {
+          "name": "peach tree",
+          "index": "2"
+        },
+        {
+          "name": "peach flower",
+          "index": "3"
+        },
+        {
+          "name": "sakura",
+          "index": "4"
+        },
+        {
+          "name": "orange tree",
+          "index": "5"
+        },
+        {
+          "name": "kiwi tree",
+          "index": "6"
+        },
+        {
+          "name": "apple tree",
+          "index": "7"
+        },
+        {
+          "name": "strawberry plant",
+          "index": "8"
+        },
+        {
+          "name": "grapevine",
+          "index": "9"
+        },
+        {
+          "name": "watermelon vine",
+          "index": "10"
+        },
+        {
+          "name": "banana tree",
+          "index": "11"
+        }
+      ]
+    },
+    {
+      "name": "fruit",
+      "imageType": "res",
+      "icon": "",
+      "imageName": "station_fruit_",
+      "items": [
+        {
+          "name": "peach",
+          "index": "1"
+        },
+        {
+          "name": "orange",
+          "index": "2"
+        },
+        {
+          "name": "kiwi fruit",
+          "index": "3"
+        },
+        {
+          "name": "apple",
+          "index": "4"
+        },
+        {
+          "name": "strawberry",
+          "index": "5"
+        },
+        {
+          "name": "grape",
+          "index": "6"
+        },
+        {
+          "name": "watermelon",
+          "index": "7"
+        },
+        {
+          "name": "banana",
+          "index": "8"
+        }
+      ]
+    },
+    {
+      "name": "seafood",
+      "imageType": "res",
+      "icon": "",
+      "imageName": "station_seafood_",
+      "items": [
+        {
+          "name": "scallop",
+          "index": "1"
+        },
+        {
+          "name": "sea snail",
+          "index": "2"
+        },
+        {
+          "name": "octopus",
+          "index": "3"
+        },
+        {
+          "name": "green-lipped mussel",
+          "index": "4"
+        },
+        {
+          "name": "shrimp",
+          "index": "5"
+        },
+        {
+          "name": "crab",
+          "index": "6"
+        },
+        {
+          "name": "tuna",
+          "index": "7"
+        },
+        {
+          "name": "squid",
+          "index": "8"
+        },
+        {
+          "name": "lobster",
+          "index": "9"
+        }
+      ]
+    },
+    {
+      "name": "festival",
+      "imageType": "res",
+      "icon": "",
+      "imageName": "station_holiday_",
+      "items": [
+        {
+          "name": "thanksgiving day",
+          "index": "1"
+        },
+        {
+          "name": "Sham El-nasim",
+          "index": "2"
+        },
+        {
+          "name": "day of the dead",
+          "index": "3"
+        },
+        {
+          "name": "Moomba festival of Melbourne",
+          "index": "4"
+        },
+        {
+          "name": "Carnaval in Brazil",
+          "index": "5"
+        },
+        {
+          "name": "New Year",
+          "index": "6"
+        },
+        {
+          "name": "Spring festival",
+          "index": "7"
+        },
+        {
+          "name": "Maple Syrup Festival",
+          "index": "8"
+        },
+        {
+          "name": "water-sprinkling festival",
+          "index": "9"
+        }
+      ]
+    },
+    {
+      "name": "vegetable",
+      "imageType": "res",
+      "icon": "",
+      "imageName": "station_vegetables_",
+      "items": [
+        {
+          "name": "potato",
+          "index": "1"
+        },
+        {
+          "name": "corn",
+          "index": "2"
+        },
+        {
+          "name": "cabbage",
+          "index": "3"
+        },
+        {
+          "name": "carrot",
+          "index": "4"
+        },
+        {
+          "name": "eggplant",
+          "index": "5"
+        },
+        {
+          "name": "spinach",
+          "index": "6"
+        },
+        {
+          "name": "pepper",
+          "index": "7"
+        },
+        {
+          "name": "cucumber",
+          "index": "8"
+        }
+      ]
+    },
+    {
+      "name": "sport",
+      "imageType": "res",
+      "icon": "",
+      "imageName": "station_exercise_",
+      "items": [
+        {
+          "name": "yoga",
+          "index": "1"
+        },
+        {
+          "name": "ballet",
+          "index": "2"
+        },
+        {
+          "name": "arirang",
+          "index": "3"
+        },
+        {
+          "name": "flamengo",
+          "index": "4"
+        },
+        {
+          "name": "ice-ball",
+          "index": "5"
+        },
+        {
+          "name": "bullfighting",
+          "index": "6"
+        },
+        {
+          "name": "judo",
+          "index": "7"
+        },
+        {
+          "name": "Thai boxing",
+          "index": "8"
+        },
+        {
+          "name": "taekwondo",
+          "index": "9"
+        }
+      ]
+    },
+    {
+      "name": "food",
+      "imageType": "res",
+      "icon": "",
+      "imageName": "station_food_",
+      "items": [
+        {
+          "name": "barbecue",
+          "index": "1"
+        },
+        {
+          "name": "Qatayef",
+          "index": "2"
+        },
+        {
+          "name": "sandwich",
+          "index": "3"
+        },
+        {
+          "name": "Beijing roast duck",
+          "index": "4"
+        },
+        {
+          "name": "Indian cuisine",
+          "index": "5"
+        },
+        {
+          "name": "coffee bean",
+          "index": "6"
+        },
+        {
+          "name": "sushi",
+          "index": "7"
+        },
+        {
+          "name": "德国香肠",
+          "index": "8"
+        },
+        {
+          "name": "披萨",
+          "index": "9"
+        },
+        {
+          "name": "松饼",
+          "index": "10"
+        },
+        {
+          "name": "syrup",
+          "index": "11"
+        },
+        {
+          "name": "salad",
+          "index": "12"
+        },
+        {
+          "name": "kimchi",
+          "index": "13"
+        },
+        {
+          "name": "ham",
+          "index": "14"
+        },
+        {
+          "name": "fried rice",
+          "index": "15"
+        },
+        {
+          "name": "fried fish and french fried",
+          "index": "16"
+        },
+        {
+          "name": "taco",
+          "index": "17"
+        },
+        {
+          "name": "buns with meat",
+          "index": "18"
+        },
+        {
+          "name": "mango rice",
+          "index": "19"
+        },
+        {
+          "name": "strawberry cake",
+          "index": "20"
+        },
+        {
+          "name": "Feta cheese",
+          "index": "21"
+        },
+        {
+          "name": "cake",
+          "index": "22"
+        },
+        {
+          "name": "kangaroo meat",
+          "index": "23"
+        },
+        {
+          "name": "noodle",
+          "index": "24"
+        },
+        {
+          "name": "dumpling",
+          "index": "25"
+        },
+        {
+          "name": "macaron",
+          "index": "26"
+        }
+      ]
+    },
+    {
+      "name": "drinks",
+      "imageType": "res",
+      "icon": "",
+      "imageName": "station_drink_",
+      "items": [
+        {
+          "name": "beer",
+          "index": "1"
+        },
+        {
+          "name": "Indian milk tea",
+          "index": "2"
+        },
+        {
+          "name": "orange juice",
+          "index": "3"
+        },
+        {
+          "name": "origin of wine",
+          "index": "4"
+        },
+        {
+          "name": "sherry",
+          "index": "5"
+        }
+      ]
+    },
+    {
+      "name": "others",
+      "imageType": "res",
+      "icon": "",
+      "imageName": "station_other_",
+      "items": [
+        {
+          "name": "Russian doll",
+          "index": "1"
+        },
+        {
+          "name": "ancient Greek pottery",
+          "index": "2"
+        },
+        {
+          "name": "lifebuoy",
+          "index": "3"
+        },
+        {
+          "name": "Egyptian papyrus rolls",
+          "index": "4"
+        }
+      ]
+    }
+  ],
+  "sound_libs": [
+    {
+      "name": "two cats fight",
+      "imageType": "res",
+      "soundType": "assets",
+      "icon": "station_lib_cat_selector",
+      "soundName": "station/en/station_cat_",
+      "imageName": "station_cat_",
+      "items": [
+        {"name": "cats fight 1","index": "1"},
+        {"name": "cats fight 2","index": "2"},
+        {"name": "cats fight 3","index": "3"},
+        {"name": "cats fight 4","index": "4"}
+      ]
+    },
+    {
+      "name": "hungry snake",
+      "imageType": "res",
+      "soundType": "assets",
+      "icon": "station_lib_snake_selector",
+      "soundName": "station/en/station_snake_",
+      "imageName": "station_snake_",
+      "items": [
+        {"name": "hungry snake strolls", "index": "1"},
+        {"name": "snake with apple in stomach","index": "2"},
+        {"name": "snake with banana in stomach","index": "3"},
+        {"name": "snake with grape in stomach","index": "4"},
+        {"name": "snake with pineapple in stomach","index": "5"},
+        {"name": "snake with apple tree in stomach","index": "6"}
+      ]
+    }
+  ]
+}

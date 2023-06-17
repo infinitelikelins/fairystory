@@ -1,0 +1,21 @@
+<resources>
+
+    <style name="wrapContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="backButton" parent="wrapContent">
+        <!--<item name="android:background">@mipmap/btn_back</item>-->
+        <item name="android:onClick">onBackClicked</item>
+    </style>
+    <style name="text1" >
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#fe6b1c</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="text2" >
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#9f5f18</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+</resources>

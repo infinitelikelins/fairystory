@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="custume_ripple_imageview">
+        <attr name="show_spacing_time" format="integer"/>
+        <attr name="imageViewWidth" format="dimension"/>
+        <attr name="imageViewHeigth" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="CirclePageIndicator">
+        <attr name="indicator_spacing" format="dimension" />
+        <attr name="indicator_type" format="enum">
+            <enum name="circle" value="0" />
+            <enum name="fraction" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="FloatTipView">
+        <attr name="image" format="reference" />
+    </declare-styleable>
+</resources>

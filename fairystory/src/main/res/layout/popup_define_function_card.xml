@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="512dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/pop_border"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="@string/choose_card"
+        android:textAlignment="center"
+        android:textColor="#81511C"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/upward"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="24dp"
+            app:srcCompat="@drawable/selector_upward" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/downward"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="24dp"
+            app:srcCompat="@drawable/selector_downward" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/left"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="24dp"
+            app:srcCompat="@drawable/selector_left" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/right"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:srcCompat="@drawable/selector_right" />
+
+    </LinearLayout>
+
+</LinearLayout>
