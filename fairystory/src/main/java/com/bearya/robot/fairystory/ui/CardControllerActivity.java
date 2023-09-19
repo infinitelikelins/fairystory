@@ -471,11 +471,8 @@ public class CardControllerActivity extends BaseActivity implements View.OnClick
 
     @Override
     public void onFrontOid(final int oid) {
-        if (oid < CardType.ACTION_FORWARD || oid > CardType.ACTION_CLOSURE) {
-            runOnUiThread(() -> appendCardAction(oid));
-            return;
-        }
         isInStartLoad = oid >= 26476 && oid <= 27375;
+        runOnUiThread(() -> appendCardAction(oid));
     }
 
     /**

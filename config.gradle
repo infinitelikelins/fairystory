@@ -7,18 +7,11 @@ ext {
             buildToolsVersion: "30.0.3"
     ]
 
-    city = [
-            name       : "Programme",
-            appid      : "com.bearya.robot.programme",
-            versionCode: 40402,
-            versionName: "4.4.2"
-    ]
-
     fairystory = [
             name       : "FairyStory",
             appid      : "com.bearya.robot.fairystory",
-            versionCode: 50408,
-            versionName: "5.4.8"
+            versionCode: 50500,
+            versionName: "5.5.0"
     ]
 
 }
