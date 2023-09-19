@@ -18,6 +18,7 @@ import com.bearya.robot.qdreamer.QdreamerAudio;
 
 public class StationsActivity extends BaseActivity implements View.OnClickListener {
 
+    private boolean isQDreamInit = false;
     public static StationLib stationLib;
     private final ImageView[] stationViewArr = new ImageView[6];
     private boolean isClicked = false;
@@ -38,7 +39,6 @@ public class StationsActivity extends BaseActivity implements View.OnClickListen
         }
         MusicUtil.playAssetsAudio("station/zh/station_init.mp3");
         stationLib = StationLib.getLibsFromAssets(getApplicationContext());
-        QdreamerAudio.getInstance().init(this);
     }
 
     @Override
@@ -57,6 +57,10 @@ public class StationsActivity extends BaseActivity implements View.OnClickListen
     @Override
     protected void onResume() {
         super.onResume();
+        if (!isQDreamInit) {
+            QdreamerAudio.getInstance().init(this);
+            isQDreamInit = true;
+        }
         loadHistory();
     }
 
@@ -97,6 +101,7 @@ public class StationsActivity extends BaseActivity implements View.OnClickListen
     protected void onDestroy() {
         super.onDestroy();
         QdreamerAudio.getInstance().release();
+        isQDreamInit = false;
         stationLib = null;
     }
 

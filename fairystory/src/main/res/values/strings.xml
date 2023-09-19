@@ -96,6 +96,7 @@
     <string name="save_success_again">作品已保存</string>
     <string name="serial_num">创作号 ： %d</string>
     <string name="blocks">编程积木</string>
+    <string name="last_command">导入指令</string>
     <string name="execute">执行</string>
     <string name="blocks_help">积木帮助</string>
     <string name="blocks_tips">注：蓝牙配对、发送指令过程中，请不要关闭此界面</string>

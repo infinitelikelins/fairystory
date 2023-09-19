@@ -57,7 +57,12 @@ public class ThemesActivity extends BaseActivity implements View.OnClickListener
 
         stationEntryView = findViewById(R.id.stationEntryView);
 
-        withClick(stationEntryView, v -> startGame(ThemeConfig.THEME_CXTD));
+        withClick(stationEntryView, v -> {
+            if (!singleClickLock) {
+                singleClickLock = true;
+                startGame(ThemeConfig.THEME_CXTD);
+            }
+        });
         withClick(R.id.my_working, v -> HistoryActivity.start(getApplicationContext()));
 
     }

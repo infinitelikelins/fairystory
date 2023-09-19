@@ -94,6 +94,7 @@
     <string name="save_success_again">work has been saved</string>
     <string name="serial_num">serial number : %d</string>
     <string name="blocks">HandyBlock</string>
+    <string name="last_command">LastCommand</string>
     <string name="execute">Execute</string>
     <string name="blocks_help">Block Manual</string>
     <string name="blocks_tips">注：蓝牙配对、发送指令过程中，请不要关闭此界面</string>

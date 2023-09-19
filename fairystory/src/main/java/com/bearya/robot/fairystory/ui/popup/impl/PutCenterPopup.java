@@ -19,7 +19,7 @@ public class PutCenterPopup extends AbsBasePopup {
         private boolean backOidIsInCenter = false;
 
         private boolean isInStartLoadCenter(int oid) {
-            return oid >= 26746 && oid <= 27211;
+            return oid >= 26476 && oid <= 27375;
         }
 
         @Override

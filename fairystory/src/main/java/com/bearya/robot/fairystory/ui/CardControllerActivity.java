@@ -46,6 +46,7 @@ import com.bearya.robot.fairystory.ui.res.CardType;
 import com.bearya.robot.fairystory.ui.res.Command;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.tencent.mmkv.MMKV;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -139,13 +140,20 @@ public class CardControllerActivity extends BaseActivity implements View.OnClick
             finish();
         });
         // 执行
-        withClick(R.id.doRun, view -> checkStartLoadToRun());
+        withClick(R.id.doRun, view -> {
+            List<CardParentAction> data = adapter.getData();
+            String lastCommand = new Gson().toJson(data);
+            MMKV.defaultMMKV().encode("lastCommand", lastCommand);
+            checkStartLoadToRun();
+        });
         // 函数定义
         withClick(R.id.function, view -> FunctionActivity.start(this));
         // 编程积木
-        findViewById(R.id.blocks).setVisibility(BaseApplication.isEnglish ? View.GONE : View.VISIBLE);
-        if (!BaseApplication.isEnglish)
-            withClick(R.id.blocks, v -> handyBlocks());
+//        findViewById(R.id.blocks).setVisibility(BaseApplication.isEnglish ? View.GONE : View.VISIBLE);
+//        if (!BaseApplication.isEnglish)
+//            withClick(R.id.blocks, v -> handyBlocks());
+        // 导入上一次编程的指令
+        withClick(R.id.blocks, v -> loadLastCommand());
 
         HandyBlockObserver handyBlockObserver = new HandyBlockObserver(this);
         handyBlockObserver.setBlockCallback(new HandyBlockObserver.BlockCallback() {
@@ -163,6 +171,7 @@ public class CardControllerActivity extends BaseActivity implements View.OnClick
 
         RobotActionManager.reset();
     }
+
 
     @Override
     protected void onStart() {
@@ -256,6 +265,13 @@ public class CardControllerActivity extends BaseActivity implements View.OnClick
         }
     }
 
+    private void loadLastCommand() {
+        String lastCommand = MMKV.defaultMMKV().decodeString("lastCommand");
+        Type type = new TypeToken<List<CardParentAction>>() {
+        }.getType();
+        adapter.setNewData(new Gson().fromJson(lastCommand, type));
+    }
+
     /**
      * 最终执行的动作
      */
@@ -263,7 +279,8 @@ public class CardControllerActivity extends BaseActivity implements View.OnClick
         CanManager.getInstance().removeListener(this);
         BaseApplication.getInstance().moveALittle(true);
         List<CardParentAction> data = adapter.getData();
-        RuntimeActivity.start(this, new Gson().toJson(data));
+        String lastCommand = new Gson().toJson(data);
+        RuntimeActivity.start(this, lastCommand);
         finish();
     }
 
@@ -455,10 +472,10 @@ public class CardControllerActivity extends BaseActivity implements View.OnClick
     @Override
     public void onFrontOid(final int oid) {
         if (oid < CardType.ACTION_FORWARD || oid > CardType.ACTION_CLOSURE) {
-            isInStartLoad = oid >= 26746 && oid <= 27211;
+            runOnUiThread(() -> appendCardAction(oid));
             return;
         }
-        runOnUiThread(() -> appendCardAction(oid));
+        isInStartLoad = oid >= 26476 && oid <= 27375;
     }
 
     /**
