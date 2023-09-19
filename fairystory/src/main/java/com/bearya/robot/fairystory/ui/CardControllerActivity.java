@@ -19,13 +19,10 @@ import com.bearya.robot.base.BaseApplication;
 import com.bearya.robot.base.can.Body;
 import com.bearya.robot.base.can.CanDataListener;
 import com.bearya.robot.base.can.CanManager;
-import com.bearya.robot.base.play.FacePlay;
-import com.bearya.robot.base.play.FaceType;
 import com.bearya.robot.base.ui.BaseActivity;
 import com.bearya.robot.base.util.DebugUtil;
 import com.bearya.robot.base.util.MusicUtil;
 import com.bearya.robot.fairystory.R;
-import com.bearya.robot.fairystory.station.ImagePreViewDialog;
 import com.bearya.robot.fairystory.ui.adapter.CardActionsAdapter;
 import com.bearya.robot.fairystory.ui.observer.HandyBlockObserver;
 import com.bearya.robot.fairystory.ui.popup.impl.ActionCardPopup;
@@ -197,10 +194,10 @@ public class CardControllerActivity extends BaseActivity implements View.OnClick
         handler.postDelayed(repeatRefreshCardAudioRunnable, 30 * 1000);
     }
 
-    private void handyBlocks() {
-        new ImagePreViewDialog(this,
-                new FacePlay(String.valueOf(R.mipmap.handy_block_combine), FaceType.Image)).show();
-    }
+//    private void handyBlocks() {
+//        new ImagePreViewDialog(this,
+//                new FacePlay(String.valueOf(R.mipmap.handy_block_combine), FaceType.Image)).show();
+//    }
 
     /**
      * 检查起点位置启动
