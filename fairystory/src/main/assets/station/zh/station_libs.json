@@ -1,25 +1,21 @@
 {
   "image_libs": [
     {
-      "name": "太空探索",
+      "name": "南词",
       "imageType": "res",
       "icon": "",
-      "imageName": "station_firmament_",
+      "imageName": "station_nanci_",
       "items": [
-        {"name": "运输员小贝运送长征2F号火箭", "index": "1"},
-        {"name": "运输员小贝运送长征七号火箭","index": "2"},
-        {"name": "航天员小贝一号准备进入长征2F号火箭","index": "3"},
-        {"name": "航天员小贝二号准备进入长征2F号火箭","index": "4"},
-        {"name": "长征2f号火箭已成功到达发射塔架","index": "5"},
-        {"name": "长征七号火箭已成功到达发射塔架","index": "6"},
-        {"name": "航天员小贝一号倒数发射","index": "7"},
-        {"name": "航天员小贝二号倒数发射","index": "8"},
-        {"name": "航天员小贝成功登陆月球","index": "9"},
-        {"name": "航天员小贝成功登陆火星","index": "10"},
-        {"name": "土卫二发现生命活动迹象","index": "11"},
-        {"name": "航天员小贝探月活动已完成","index": "12"},
-        {"name": "航天员小贝火星科探已完成","index": "13"},
-        {"name": "土卫二发现液态水","index": "14"}
+        {"name": "程门立雪", "index": "1"},
+        {"name": "吉祥歌","index": "2"},
+        {"name": "将乐美将乐乐","index": "3"},
+        {"name": "擂茶迎客","index": "4"},
+        {"name": "李寄斩蛇","index": "5"},
+        {"name": "龙灯歌","index": "6"},
+        {"name": "牧歌","index": "7"},
+        {"name": "王婆数鸡","index": "8"},
+        {"name": "舞龙灯","index": "9"},
+        {"name": "小鱼儿","index": "10"}
       ]
     },
     {
@@ -37,6 +33,40 @@
         {"name": "烤年糕","index": "7"},
         {"name": "老鸭粉干","index": "8"},
         {"name": "梅花酥","index": "9"}
+      ]
+    },
+    {
+      "name": "跑跑镇",
+      "imageType": "res",
+      "icon": "",
+      "imageName": "station_run_",
+      "items": [
+        {"name": "小鱼", "index": "1"},
+        {"name": "小鹰","index": "2"},
+        {"name": "小猫","index": "3"},
+        {"name": "仙人球","index": "4"},
+        {"name": "梯子","index": "5"},
+        {"name": "扫帚","index": "6"},
+        {"name": "肉丸子","index": "7"},
+        {"name": "苹果","index": "8"},
+        {"name": "喷火龙","index": "9"},
+        {"name": "馒头","index": "10"},
+        {"name": "妈妈","index": "11"},
+        {"name": "轮子","index": "12"},
+        {"name": "老奶奶","index": "13"},
+        {"name": "蓝色","index": "14"},
+        {"name": "卡车","index": "15"},
+        {"name": "黄色","index": "16"},
+        {"name": "红宝石","index": "17"},
+        {"name": "黑熊","index": "18"},
+        {"name": "荷叶","index": "19"},
+        {"name": "海豚","index": "20"},
+        {"name": "拐杖","index": "21"},
+        {"name": "公主","index": "22"},
+        {"name": "房子","index": "23"},
+        {"name": "大山","index": "24"},
+        {"name": "白熊","index": "25"},
+        {"name": "爸爸","index": "26"}
       ]
     },
     {
@@ -1071,27 +1101,23 @@
   ],
   "sound_libs": [
     {
-      "name": "太空探索",
+      "name": "南词",
       "imageType": "res",
       "soundType": "assets",
-      "icon": "station_lib_firmament_selector",
-      "soundName": "station/zh/station_firmament_",
-      "imageName": "station_firmament_",
+      "icon": "station_lib_nanci_selector",
+      "soundName": "station/zh/station_nanci_",
+      "imageName": "station_nanci_",
       "items": [
-        {"name": "运输员小贝运送长征2F号火箭", "index": "1"},
-        {"name": "运输员小贝运送长征七号火箭","index": "2"},
-        {"name": "航天员小贝一号准备进入长征2F号火箭","index": "3"},
-        {"name": "航天员小贝二号准备进入长征2F号火箭","index": "4"},
-        {"name": "长征2f号火箭已成功到达发射塔架","index": "5"},
-        {"name": "长征七号火箭已成功到达发射塔架","index": "6"},
-        {"name": "航天员小贝一号倒数发射", "index": "7"},
-        {"name": "航天员小贝二号倒数发射","index": "8"},
-        {"name": "航天员小贝成功登陆月球","index": "9"},
-        {"name": "航天员小贝成功登陆火星","index": "10"},
-        {"name": "土卫二发现生命活动迹象","index": "11"},
-        {"name": "航天员小贝探月活动已完成","index": "12"},
-        {"name": "航天员小贝火星科探已完成", "index": "13"},
-        {"name": "土卫二发现液态水","index": "14"}
+        {"name": "程门立雪", "index": "1"},
+        {"name": "吉祥歌","index": "2"},
+        {"name": "将乐美将乐乐","index": "3"},
+        {"name": "擂茶迎客","index": "4"},
+        {"name": "李寄斩蛇","index": "5"},
+        {"name": "龙灯歌","index": "6"},
+        {"name": "牧歌","index": "7"},
+        {"name": "王婆数鸡","index": "8"},
+        {"name": "舞龙灯","index": "9"},
+        {"name": "小鱼儿","index": "10"}
       ]
     },
     {
@@ -1111,6 +1137,42 @@
         {"name": "烤年糕", "index": "7"},
         {"name": "老鸭粉干","index": "8"},
         {"name": "梅花酥","index": "9"}
+      ]
+    },
+    {
+      "name": "跑跑镇",
+      "imageType": "res",
+      "soundType": "assets",
+      "icon": "station_lib_run_selector",
+      "soundName": "station/zh/station_run_",
+      "imageName": "station_run_",
+      "items": [
+        {"name": "小鱼", "index": "1"},
+        {"name": "小鹰","index": "2"},
+        {"name": "小猫","index": "3"},
+        {"name": "仙人球","index": "4"},
+        {"name": "梯子","index": "5"},
+        {"name": "扫帚","index": "6"},
+        {"name": "肉丸子","index": "7"},
+        {"name": "苹果","index": "8"},
+        {"name": "喷火龙","index": "9"},
+        {"name": "馒头","index": "10"},
+        {"name": "妈妈","index": "11"},
+        {"name": "轮子","index": "12"},
+        {"name": "老奶奶","index": "13"},
+        {"name": "蓝色","index": "14"},
+        {"name": "卡车","index": "15"},
+        {"name": "黄色","index": "16"},
+        {"name": "红宝石","index": "17"},
+        {"name": "黑熊","index": "18"},
+        {"name": "荷叶","index": "19"},
+        {"name": "海豚","index": "20"},
+        {"name": "拐杖","index": "21"},
+        {"name": "公主","index": "22"},
+        {"name": "房子","index": "23"},
+        {"name": "大山","index": "24"},
+        {"name": "白熊","index": "25"},
+        {"name": "爸爸","index": "26"}
       ]
     },
     {
