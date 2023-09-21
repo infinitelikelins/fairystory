@@ -20,11 +20,9 @@ import com.bearya.robot.base.can.Body;
 import com.bearya.robot.base.can.CanDataListener;
 import com.bearya.robot.base.can.CanManager;
 import com.bearya.robot.base.ui.BaseActivity;
-import com.bearya.robot.base.util.DebugUtil;
 import com.bearya.robot.base.util.MusicUtil;
 import com.bearya.robot.fairystory.R;
 import com.bearya.robot.fairystory.ui.adapter.CardActionsAdapter;
-import com.bearya.robot.fairystory.ui.observer.HandyBlockObserver;
 import com.bearya.robot.fairystory.ui.popup.impl.ActionCardPopup;
 import com.bearya.robot.fairystory.ui.popup.impl.CardUpdatePopup;
 import com.bearya.robot.fairystory.ui.popup.impl.CountPopup;
@@ -63,7 +61,7 @@ public class CardControllerActivity extends BaseActivity implements View.OnClick
         @Override
         public void run() {
             // 每30秒提示一次小朋友刷卡或者点击添加行动指令，有行动指令不提示
-            if (adapter.getData().size() <= 0) {
+            if (adapter.getData().size() == 0) {
                 MusicUtil.playAssetsAudio("card/zh/p_guide.mp3");
             }
             repeatRefreshCardAudio();
@@ -144,27 +142,30 @@ public class CardControllerActivity extends BaseActivity implements View.OnClick
             checkStartLoadToRun();
         });
         // 函数定义
-        withClick(R.id.function, view -> FunctionActivity.start(this));
+//        withClick(R.id.function, view -> FunctionActivity.start(this));
         // 编程积木
 //        findViewById(R.id.blocks).setVisibility(BaseApplication.isEnglish ? View.GONE : View.VISIBLE);
 //        if (!BaseApplication.isEnglish)
 //            withClick(R.id.blocks, v -> handyBlocks());
+//        findViewById(R.id.blocks).setVisibility(BaseApplication.isEnglish ? View.GONE : View.VISIBLE);
+//        if (!BaseApplication.isEnglish)
+//            withClick(R.id.blocks, v -> handyBlocks());
         // 导入上一次编程的指令
-        withClick(R.id.blocks, v -> loadLastCommand());
+        withClick(R.id.load_command, v -> loadLastCommand());
 
-        HandyBlockObserver handyBlockObserver = new HandyBlockObserver(this);
-        handyBlockObserver.setBlockCallback(new HandyBlockObserver.BlockCallback() {
-            @Override
-            public void onBlockDef(List<CardParentAction> cards) {
-                adapter.setNewData(cards);
-                MusicUtil.playAssetsAudio("tts/zh/handy_block_accept.mp3", mp -> checkStartLoadToRun());
-            }
-
-            @Override
-            public void onBlockMessage(String message, int icon) {
-                DebugUtil.info("message = %s , icon = %d", message, icon);
-            }
-        });
+//        HandyBlockObserver handyBlockObserver = new HandyBlockObserver(this);
+//        handyBlockObserver.setBlockCallback(new HandyBlockObserver.BlockCallback() {
+//            @Override
+//            public void onBlockDef(List<CardParentAction> cards) {
+//                adapter.setNewData(cards);
+//                MusicUtil.playAssetsAudio("tts/zh/handy_block_accept.mp3", mp -> checkStartLoadToRun());
+//            }
+//
+//            @Override
+//            public void onBlockMessage(String message, int icon) {
+//                DebugUtil.info("message = %s , icon = %d", message, icon);
+//            }
+//        });
 
         RobotActionManager.reset();
     }
@@ -204,7 +205,7 @@ public class CardControllerActivity extends BaseActivity implements View.OnClick
      */
     private void checkStartLoadToRun() {
         final List<CardParentAction> data = adapter.getData();
-        if (data.size() <= 0) {
+        if (data.size() == 0) {
             new EmptyActionPopup(this).showPopupWindow();
             return;
         }

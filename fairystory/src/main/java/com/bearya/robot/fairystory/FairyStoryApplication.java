@@ -12,7 +12,6 @@ public class FairyStoryApplication extends BaseApplication {
     public void onCreate() {
         super.onCreate();
         DebugUtil.setDebugMode(BuildConfig.DEBUG);
-        deleteDatabase("story.db");
     }
 
     @Override

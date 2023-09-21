@@ -35,7 +35,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/blocks"
+        android:id="@+id/load_command"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginEnd="24dp"

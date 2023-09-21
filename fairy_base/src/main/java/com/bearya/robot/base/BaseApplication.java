@@ -99,11 +99,11 @@ public abstract class BaseApplication extends Application {
     public void release() {
         RobotActionManager.reset();
         Director.getInstance().release();
+        CanManager.getInstance().release();
         sendBroadcast(new Intent(BluetoothMonitorService.ACTION_STOP_SERVICE));
         BaseActivity.finishAllActivity();
         MusicUtil.stopMusic();
         MusicUtil.stopBgMusic();
-        CanManager.getInstance().release();
         android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(0);
     }

@@ -44,28 +44,17 @@ public class CanManager {
         return instance;
     }
 
-    public void startScan(){
-        int result = Canjni.open_can(Canjni.CAN_CTRLMODE_3_SAMPLES, 1000000);
-        if(mCanReadThread==null) {
+    public void startScan() {
+        if (mCanReadThread == null) {
+            Canjni.open_can(Canjni.CAN_CTRLMODE_3_SAMPLES, 1000000);
             bRunning = true;
             mCanReadThread = new Thread(new ScannerRunnable());
             mCanReadThread.setName("Can-Scanner");
             mCanReadThread.start();
         }
-//        if (mUpperRfThread == null) {
-//            mUpperRfThread = new Thread(new UpperScannerRunnable());
-//            mUpperRfThread.setName("UpperRf-Scanner");
-//            mUpperRfThread.start();
-//        }
     }
 
-    public void reStartCan(){
-        closeCan();
-        startScan();
-    }
-
-    public void closeCan(){
-        listeners.clear();
+    public void closeCan() {
         bRunning = false;
         if (mCanReadThread != null) {
             try {
@@ -85,23 +74,23 @@ public class CanManager {
         mCanReadThread = null;
         Canjni.close_can();
     }
-    
+
     private void onReadData() {
-        if(get(8) == CanDataType.PRODUCT_CODE.getValue()){
+        if (get(8) == CanDataType.PRODUCT_CODE.getValue()) {
             onCanDataType(CanDataType.PRODUCT_CODE);
             return;
         }
         CanDataType dataTtype;
         //新格式的避障防跌
-        if (get(9) == 0x04){
+        if (get(9) == 0x04) {
             dataTtype = CanDataType.getType(get(10));
-        }else {
+        } else {
             dataTtype = CanDataType.getType(get(8));
-            if(dataTtype ==  CanDataType.UNKNOW){
+            if (dataTtype == CanDataType.UNKNOW) {
                 dataTtype = CanDataType.getType(get(9));
             }
         }
-        if(dataTtype==CanDataType.ELECTRICITY){
+        if (dataTtype == CanDataType.ELECTRICITY) {
             RobotActionManager.sendHeartbeat();//发送心跳包
         }
         onCanDataType(dataTtype);
@@ -109,8 +98,8 @@ public class CanManager {
 
     private ElectricityCanDataHandler electricityCanDataHandler = new ElectricityCanDataHandler(BaseApplication.getInstance());
 
-    private void onCanDataType(CanDataType dataType){
-        switch (dataType){
+    private void onCanDataType(CanDataType dataType) {
+        switch (dataType) {
             case ELECTRICITY:
                 electricityCanDataHandler.onElectricityData(readBuffer);
                 break;
@@ -119,20 +108,20 @@ public class CanManager {
                 break;
             case HEAD_SCANNER: {
                 int oid = parseToOid(readBuffer);
-                if (oid>0 && listeners!=null && listeners.size()>0){
+                if (oid > 0 && listeners != null && listeners.size() > 0) {
                     Iterator<CanDataListener> iterator = listeners.iterator();
-                    while (iterator.hasNext()){
+                    while (iterator.hasNext()) {
                         CanDataListener canDataListener = iterator.next();
                         canDataListener.onFrontOid(oid);
                     }
                 }
                 break;
             }
-            case TAIL_SCANNER:{
+            case TAIL_SCANNER: {
                 int oid = parseToOid(readBuffer);
-                if (oid>0 && listeners!=null && listeners.size()>0){
+                if (oid > 0 && listeners != null && listeners.size() > 0) {
                     Iterator<CanDataListener> iterator = listeners.iterator();
-                    while (iterator.hasNext()){
+                    while (iterator.hasNext()) {
                         CanDataListener canDataListener = iterator.next();
                         canDataListener.onBackOid(oid);
                     }
@@ -140,11 +129,11 @@ public class CanManager {
                 break;
             }
             case EXCEPTION:
-                if (get(readBuffer,10) == 0x1 || get(readBuffer,10) == 0x2) {
+                if (get(readBuffer, 10) == 0x1 || get(readBuffer, 10) == 0x2) {
 
-                } else if (get(readBuffer,10) == 0x7){
+                } else if (get(readBuffer, 10) == 0x7) {
 
-                } else if (get(readBuffer,10) == 0x8){
+                } else if (get(readBuffer, 10) == 0x8) {
 
                 }
                 break;
@@ -153,26 +142,26 @@ public class CanManager {
 //触摸
                 if (get(readBuffer, 11) == 0x9) {//左手
                     if (touchHandle.touch()) {
-                        onTouch(Body.LEFT_ARM,"music/touch_hand.mp3");
+                        onTouch(Body.LEFT_ARM, "music/touch_hand.mp3");
                     }
                 } else if (get(readBuffer, 11) == 0xa) {//右手
                     if (touchHandle.touch()) {
-                        onTouch(Body.RIGHT_ARM,"music/touch_hand.mp3");
+                        onTouch(Body.RIGHT_ARM, "music/touch_hand.mp3");
                     }
                 } else if (get(readBuffer, 11) == 0x11) {//Home键
 
                 } else if (get(readBuffer, 11) == 0x5) {//胸前
-                    if (get(readBuffer, 10) == 0x01){
+                    if (get(readBuffer, 10) == 0x01) {
 
-                    }else if (get(readBuffer, 10) == 0x02) {
+                    } else if (get(readBuffer, 10) == 0x02) {
                         if (touchHandle.touch()) {
                             onTouch(Body.CHEST, "music/touch_chest.mp3");
                         }
                     }
                 } else if (get(readBuffer, 11) == 0x6) {
-                    if (get(readBuffer, 10) == 0x01){
+                    if (get(readBuffer, 10) == 0x01) {
 
-                    }else if (get(readBuffer, 10) == 0x02) {
+                    } else if (get(readBuffer, 10) == 0x02) {
                         if (touchHandle.touch()) {
                             onTouch(Body.BACK, "music/touch_back.wav");
                         }
@@ -193,12 +182,12 @@ public class CanManager {
         }
     }
 
-    public void onPowerBtnData(byte[] data){
-        if (get(data,10) == 0x1) {
+    public void onPowerBtnData(byte[] data) {
+        if (get(data, 10) == 0x1) {
             //短按
-        } else if (get(data,10) == 0x2) {
+        } else if (get(data, 10) == 0x2) {
             onPowerBtnLongClick();
-        } else if (get(data,10) == 0x3) {
+        } else if (get(data, 10) == 0x3) {
             //强制关机LongLongClick
         }
     }
@@ -207,14 +196,14 @@ public class CanManager {
         electricityCanDataHandler.popPowerOperation();
     }
 
-    public void onVoiceDesData(byte[] data){
-        if (get(data,10) == 0x1) {
+    public void onVoiceDesData(byte[] data) {
+        if (get(data, 10) == 0x1) {
             Observable.just(this).subscribeOn(AndroidSchedulers.mainThread()).subscribe(commonCanDataHandler -> changeVolume(true));
         }
     }
 
-    public void onVoiceIncData(byte[] data){
-        if (get(data,10) == 0x1) {
+    public void onVoiceIncData(byte[] data) {
+        if (get(data, 10) == 0x1) {
             Observable.just(this).subscribeOn(AndroidSchedulers.mainThread()).subscribe(manager -> changeVolume(false));
         }
     }
@@ -226,7 +215,7 @@ public class CanManager {
         volume += isIncr ? 1 : -1;
         if (volume > maxVolumeOfStreamMusic) {
             volume = maxVolumeOfStreamMusic;
-        } else if (volume < 0){
+        } else if (volume < 0) {
             volume = 0;
         }
         audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, volume, 0);
@@ -237,8 +226,8 @@ public class CanManager {
 
     private void onTouch(Body body, String effect) {
 //        MusicUtil.playAssetsAudio(effect);
-        if(listeners!=null && listeners.size()>0){
-            for(CanDataListener listener:listeners) {
+        if (listeners != null && listeners.size() > 0) {
+            for (CanDataListener listener : listeners) {
                 listener.onTouchBody(body);
             }
         }
@@ -248,7 +237,7 @@ public class CanManager {
      * 从Can缓冲区读取数据
      */
     private int get(int index) throws ArrayIndexOutOfBoundsException {
-        return CanDataHandler.get(readBuffer,index);
+        return CanDataHandler.get(readBuffer, index);
     }
 
     //上位机2.4G的读取
@@ -299,7 +288,7 @@ public class CanManager {
         }
     }
 
-    class ScannerRunnable implements IUpdater,Runnable {
+    class ScannerRunnable implements IUpdater, Runnable {
 
         public ScannerRunnable() {
         }
@@ -308,7 +297,7 @@ public class CanManager {
         public void update(float dt) {
             try {
                 readCan();
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -334,7 +323,7 @@ public class CanManager {
         }
     }
 
-    private int openCan(){
+    private int openCan() {
         DebugUtil.error("open can %s", Thread.currentThread().getName());
         return Canjni.open_can(Canjni.CAN_CTRLMODE_3_SAMPLES, 1000000);
     }
@@ -343,42 +332,42 @@ public class CanManager {
     private Set<Integer> countSet = new HashSet<>();
     private int lastNum0;
 
-    private int getValue(int origin){
-        if (origin < 0){
+    private int getValue(int origin) {
+        if (origin < 0) {
             return origin + 256;
         }
-       return origin;
+        return origin;
     }
 
-    private String getLostDataFirst(){
+    private String getLostDataFirst() {
         String content = "";
-        for (int i = 1 ;i <=254 ;i++){
+        for (int i = 1; i <= 254; i++) {
             if (!countSet.contains(i)) {
                 content += i + ",";
             }
         }
         //异常情况
-        if ("".equals(content)){
+        if ("".equals(content)) {
             return "";
         }
-        return content.substring(0,content.length() -1);
+        return content.substring(0, content.length() - 1);
     }
 
-    private String getLostData(){
+    private String getLostData() {
         String content = "";
-        for (int i = 1 ;i <=255 ;i++){
+        for (int i = 1; i <= 255; i++) {
             if (!countSet.contains(i)) {
                 content += i + ",";
             }
         }
         //异常情况
-        if ("".equals(content)){
+        if ("".equals(content)) {
             return "";
         }
-        return content.substring(0,content.length() -1);
+        return content.substring(0, content.length() - 1);
     }
 
-    private String getBufferAddress(){
+    private String getBufferAddress() {
         return upperRfReadBuffer[4] + "," + upperRfReadBuffer[5]
                 + "," + upperRfReadBuffer[6] + "," + upperRfReadBuffer[7];
     }
@@ -399,60 +388,61 @@ public class CanManager {
         });
     }
 
-    public int parseToOid(byte[] data){
+    public int parseToOid(byte[] data) {
         int heigh;
         int low;
-        if (get(data,10) >= 0) {
-            heigh = get(data,10) * 256;
+        if (get(data, 10) >= 0) {
+            heigh = get(data, 10) * 256;
         } else {
-            heigh = get(data,10);
+            heigh = get(data, 10);
             heigh = (heigh & 0xff) * 256;
         }
-        if (get(data,11) >= 0) {
-            low = get(data,11);
+        if (get(data, 11) >= 0) {
+            low = get(data, 11);
         } else {
-            low = get(data,11);
+            low = get(data, 11);
             low = low & 0xff;
         }
         return heigh + low;
     }
 
-    public  int get(byte[] data,int index){
-            return CanDataHandler.get(data,index);
-        }
+    public int get(byte[] data, int index) {
+        return CanDataHandler.get(data, index);
+    }
 
-    public boolean isbRunning(){
+    public boolean isbRunning() {
         return bRunning;
     }
 
     public void addListener(CanDataListener listener) {
-        if(!listeners.contains(listener)){
-            DebugUtil.debug("添加监听:%s-%d",listener.getClass().getSimpleName(),listener.hashCode());
+        if (!listeners.contains(listener)) {
+            DebugUtil.debug("添加监听:%s-%d", listener.getClass().getSimpleName(), listener.hashCode());
             listeners.add(listener);
         }
     }
 
-    public void removeListener(CanDataListener listener){
+    public void removeListener(CanDataListener listener) {
         Iterator<CanDataListener> iterator = listeners.iterator();
         CanDataListener equalListener = null;
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             CanDataListener canDataListener = iterator.next();
-            if(canDataListener==listener){
+            if (canDataListener == listener) {
                 equalListener = canDataListener;
                 break;
             }
         }
-        if(equalListener!=null){
-            DebugUtil.debug("移除监听:%s-%d",equalListener.getClass().getSimpleName(),listener.hashCode());
+        if (equalListener != null) {
+            DebugUtil.debug("移除监听:%s-%d", equalListener.getClass().getSimpleName(), listener.hashCode());
             listeners.remove(equalListener);
         }
     }
 
     public void release() {
-        if(listeners!=null && !listeners.isEmpty()){
+        closeCan();
+        if (listeners != null && !listeners.isEmpty()) {
             listeners.clear();
         }
-        if(electricityCanDataHandler!=null){
+        if (electricityCanDataHandler != null) {
             electricityCanDataHandler.release();
         }
     }
