@@ -54,25 +54,6 @@
         app:layout_constraintTop_toTopOf="@id/doRun"
         tools:visibility="visible" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/function"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/shape_white_round_border"
-        android:gravity="center"
-        android:paddingStart="10dp"
-        android:paddingEnd="0dp"
-        android:text="@string/define_function"
-        android:visibility="gone"
-        android:textColor="#333333"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:drawableStartCompat="@drawable/ic_functions"
-        app:layout_constraintBottom_toBottomOf="@id/doRun"
-        app:layout_constraintEnd_toStartOf="@id/blocks"
-        app:layout_constraintTop_toTopOf="@id/doRun" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/card_action"
         android:layout_width="0dp"

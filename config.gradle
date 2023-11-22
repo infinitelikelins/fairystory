@@ -10,8 +10,8 @@ ext {
     fairystory = [
             name       : "FairyStory",
             appid      : "com.bearya.robot.fairystory",
-            versionCode: 50500,
-            versionName: "5.5.0"
+            versionCode: 50503,
+            versionName: "5.5.3"
     ]
 
 }

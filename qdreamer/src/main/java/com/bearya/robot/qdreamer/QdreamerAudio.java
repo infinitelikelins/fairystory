@@ -21,6 +21,8 @@ public class QdreamerAudio {
     private boolean startRecord;
     private static QdreamerAudio mInstance;
 
+    private boolean isQDreamInit = false;
+
     public static QdreamerAudio getInstance() {
         if (mInstance == null) {
             mInstance = new QdreamerAudio();
@@ -33,18 +35,29 @@ public class QdreamerAudio {
     }
 
     public void init(Context context) {
+        if (isQDreamInit) return;
         try {
-            String mPath = context.getFilesDir().getAbsolutePath() + "/qvoice";
-            fileExistsOrCopyFromAssets(context, mPath,"audio.cfg", "cfg");
-            QSession ss = new QSession(context);
-            ss.setQSessionCallback(null);
             String appKey = "83999894-37bd-3a0c-b2a6-681405043c61";
             String appId = "0d11b372-9c45-11e7-b526-00163e13c8a2";
-            sessionId = ss.initSession(appId, appKey);
+            String mPath = context.getFilesDir().getAbsolutePath() + "/qvoice";
+            fileExistsOrCopyFromAssets(context, mPath,"audio.cfg", "cfg");
+            mSession = new QSession(context);
+            mSession.setQSessionCallback(null);
+            sessionId = mSession.initSession(appId, appKey);
             audio = new QAudio();
             audio.newAudio(sessionId, mPath + "/audio.cfg");// 创建audio录音引
+            isQDreamInit = true;
         } catch (Exception e) {
             e.printStackTrace();
+            if (audio != null) {
+                audio.deleteAudio();
+                audio = null;
+            }
+            if (mSession != null) {
+                mSession.exitSession(sessionId);
+                mSession = null;
+            }
+            isQDreamInit = false;
         }
     }
 
@@ -94,6 +107,7 @@ public class QdreamerAudio {
             }
         }
         mInstance = null;
+        isQDreamInit= false;
     }
 
     private void fileExistsOrCopyFromAssets(Context context, String filePath, String... fileNames) throws IOException {

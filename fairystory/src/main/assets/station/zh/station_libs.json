@@ -1,6 +1,32 @@
 {
   "image_libs": [
     {
+      "name": "宁德风光",
+      "imageType": "res",
+      "icon": "",
+      "imageName": "station_ningdefg_",
+      "items": [
+        {"name": "霍童古镇", "index": "1"},
+        {"name": "金蛇头","index": "2"},
+        {"name": "镜台山","index": "3"},
+        {"name": "南岸公园","index": "4"},
+        {"name": "三都澳","index": "5"},
+        {"name": "畲族宫", "index": "6"},
+        {"name": "鸳鸯草场","index": "7"}
+      ]
+    },
+    {
+      "name": "丰台园",
+      "imageType": "res",
+      "icon": "",
+      "imageName": "station_fengty_",
+      "items": [
+        {"name": "大班操场", "index": "1"},
+        {"name": "大石头","index": "2"},
+        {"name": "园史馆","index": "3"}
+      ]
+    },
+    {
       "name": "南词",
       "imageType": "res",
       "icon": "",
@@ -1100,6 +1126,31 @@
     }
   ],
   "sound_libs": [
+    {
+      "name": "石狮风景",
+      "imageType": "res",
+      "soundType": "assets",
+      "icon": "station_lib_c_selector",
+      "soundName": "station/zh/station_shishiyy_",
+      "imageName": "station_shishiyy_",
+      "items": [
+        {"name": "古卫城", "index": "1"},
+        {"name": "骑楼","index": "2"}
+      ]
+    },
+    {
+      "name": "丰台园",
+      "imageType": "res",
+      "soundType": "assets",
+      "icon": "station_lib_c_selector",
+      "soundName": "station/zh/station_fengty_",
+      "imageName": "station_fengty_",
+      "items": [
+        {"name": "大班操场", "index": "1"},
+        {"name": "大石头","index": "2"},
+        {"name": "园史馆","index": "3"}
+      ]
+    },
     {
       "name": "南词",
       "imageType": "res",
